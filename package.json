@@ -7,19 +7,24 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
   "keywords": [],
   "publishConfig": {
     "access": "public"
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^24.0.4",
-    "automd": "^0.4.0",
-    "changelogen": "^0.6.1",
-    "eslint": "^9.29.0",
-    "obuild": "^0.2.1",
-    "typescript": "^5.8.3",
-    "vitest": "^3.2.4"
+    "@antfu/eslint-config": "catalog:",
+    "@types/node": "catalog:",
+    "@vitest/eslint-plugin": "catalog:",
+    "automd": "catalog:",
+    "changelogen": "catalog:",
+    "eslint": "catalog:",
+    "obuild": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   }
 }
