@@ -1,12 +1,25 @@
 {
-  "name": "fanoos",
+  "name": "@fanoos/root",
   "version": "0.0.1",
-  "description": "FanoosJS is a static code analysis tool that helps developers understand the structure, architecture, and internal metrics of their JavaScript/TypeScript projects.",
   "type": "module",
+  "packageManager": "pnpm@10.12.3",
   "publisher": "NavidTM",
-  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {},
   "keywords": [],
-  "author": "",
-  "license": "MIT"
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.0.4",
+    "automd": "^0.4.0",
+    "changelogen": "^0.6.1",
+    "eslint": "^9.29.0",
+    "obuild": "^0.2.1",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
 }
