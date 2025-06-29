@@ -8,10 +8,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "fs-extra": "catalog:",
     "globby": "catalog:"
   },
   "devDependencies": {
-    "@types/fs-extra": "catalog:"
+    "@types/fs-extra": "catalog:",
+    "fs-extra": "catalog:"
   }
 }

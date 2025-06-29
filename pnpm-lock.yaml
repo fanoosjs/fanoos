@@ -6,12 +6,42 @@ settings:
 
 catalogs:
   default:
+    '@antfu/eslint-config':
+      specifier: ^4.16.1
+      version: 4.16.1
     '@types/fs-extra':
       specifier: ^11.0.4
       version: 11.0.4
+    '@types/node':
+      specifier: ^24.0.4
+      version: 24.0.4
+    '@vitest/eslint-plugin':
+      specifier: ^1.2.7
+      version: 1.2.7
+    automd:
+      specifier: ^0.4.0
+      version: 0.4.0
+    changelogen:
+      specifier: ^0.6.1
+      version: 0.6.1
+    eslint:
+      specifier: ^9.29.0
+      version: 9.29.0
     fs-extra:
-      specifier: ^11.3.0
+      specifier: 'catalog:'
       version: 11.3.0
+    globby:
+      specifier: ^14.1.0
+      version: 14.1.0
+    obuild:
+      specifier: ^0.2.1
+      version: 0.2.1
+    typescript:
+      specifier: ^5.8.3
+      version: 5.8.3
+    vitest:
+      specifier: ^3.2.4
+      version: 3.2.4
 
 importers:
 
@@ -47,16 +77,16 @@ importers:
 
   packages/core:
     dependencies:
-      fs-extra:
-        specifier: 'catalog:'
-        version: 11.3.0
       globby:
-        specifier: ^14.1.0
+        specifier: 'catalog:'
         version: 14.1.0
     devDependencies:
       '@types/fs-extra':
         specifier: 'catalog:'
         version: 11.0.4
+      fs-extra:
+        specifier: 'catalog:'
+        version: 11.3.0
 
 packages:
 

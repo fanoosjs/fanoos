@@ -1,5 +1,6 @@
 packages:
-  - 'packages/*'
+  - packages/*
+
 catalog:
   '@antfu/eslint-config': ^4.16.1
   '@types/fs-extra': ^11.0.4
@@ -8,7 +9,7 @@ catalog:
   automd: ^0.4.0
   changelogen: ^0.6.1
   eslint: ^9.29.0
-  fs-extra: ^11.3.0
+  fs-extra: 'catalog:'
   globby: ^14.1.0
   obuild: ^0.2.1
   typescript: ^5.8.3
