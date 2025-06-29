@@ -2,7 +2,7 @@
   "name": "@fanoos/root",
   "version": "0.0.1",
   "type": "module",
-  "packageManager": "pnpm@10.12.3",
+  "packageManager": "pnpm@10.12.4",
   "publisher": "NavidTM",
   "workspaces": [
     "packages/*"

@@ -2,11 +2,15 @@ packages:
   - 'packages/*'
 catalog:
   '@antfu/eslint-config': ^4.16.1
+  '@types/fs-extra': ^11.0.4
   '@types/node': ^24.0.4
   '@vitest/eslint-plugin': ^1.2.7
   automd: ^0.4.0
   changelogen: ^0.6.1
   eslint: ^9.29.0
+  fs-extra: ^11.3.0
+  ignore: ^7.0.5
   obuild: ^0.2.1
+  tinyglobby: ^0.2.14
   typescript: ^5.8.3
   vitest: ^3.2.4
