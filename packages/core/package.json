@@ -8,7 +8,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "globby": "catalog:"
+    "globby": "catalog:",
+    "oxc-parser": "catalog:"
   },
   "devDependencies": {
     "@types/fs-extra": "catalog:",
