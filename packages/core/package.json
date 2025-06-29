@@ -9,8 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "fs-extra": "catalog:",
-    "ignore": "catalog:",
-    "tinyglobby": "catalog:"
+    "globby": "catalog:"
   },
   "devDependencies": {
     "@types/fs-extra": "catalog:"
