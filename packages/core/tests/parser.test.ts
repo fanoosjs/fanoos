@@ -15,11 +15,16 @@ describe('parseCodeToAST', () => {
     expect(ast.body.length).toBeGreaterThan(0);
   });
 
-  it('throws error on invalid code', async () => {
+  it('should return error on invalid code', async () => {
     const badCode = `const = ;`;
 
     const { errors } = await parseCodeToAST('invalid.ts', badCode);
     expect(errors).toHaveLength(1);
+  });
+  it('should throws error on invalid format', async () => {
+    const code = `print(1)`;
+
+    expect(async () => await parseCodeToAST('invalidFormat.py', code)).rejects.toThrowError(/Failed to parse invalidFormat.py/);
   });
 });
 
