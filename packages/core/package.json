@@ -2,8 +2,16 @@
   "name": "fanoos",
   "version": "0.0.1",
   "description": "FanoosJS is a static code analysis tool that helps developers understand the structure, architecture, and internal metrics of their JavaScript/TypeScript projects.",
-  "main": "index.js",
-  "scripts": {},
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports":{
+    ".":"./dist/index.mjs",
+    "./package.json":"./package.json"
+  },
+  "scripts": {
+    "build": "tsdown"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",

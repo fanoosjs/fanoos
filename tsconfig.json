@@ -14,7 +14,7 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@vubina/*": ["packages/*/src"]
+      "@fanoos/*": ["packages/*/src"]
     }
   },
   "exclude": ["node_modules", "dist"]

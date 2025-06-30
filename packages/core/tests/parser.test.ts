@@ -1,5 +1,4 @@
-import type { ScannedFile } from '@vubina/core';
-
+import type { ScannedFile } from '../src/scanner';
 import { describe, expect, it } from 'vitest';
 import { parseCodeToAST, parseScannedFiles } from '../src/parser';
 
