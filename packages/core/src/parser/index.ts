@@ -1,2 +1,2 @@
-export { parseCodeToAST } from './astParser';
-export { ParsedFile, parseScannedFiles } from './parser';
+export * from './astParser';
+export * from './parser';
