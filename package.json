@@ -8,6 +8,8 @@
     "packages/*"
   ],
   "scripts": {
+    "test": "vitest",
+    "test:cov": "vitest --coverage",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
@@ -24,7 +26,7 @@
     "automd": "catalog:",
     "changelogen": "catalog:",
     "eslint": "catalog:",
-    "obuild": "catalog:",
+    "tsdown": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
   }
