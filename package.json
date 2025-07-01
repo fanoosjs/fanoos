@@ -14,9 +14,7 @@
     "lint:fix": "eslint --fix"
   },
   "keywords": [],
-  "publishConfig": {
-    "access": "public"
-  },
+  "private":"true",
   "license": "MIT",
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
