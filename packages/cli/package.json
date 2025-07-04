@@ -2,15 +2,18 @@
   "name": "@fanoos/cli",
   "version": "0.0.2",
   "description": "",
+  "author": "",
+  "license": "MIT",
+  "keywords": [],
   "main": "index.js",
+  "bin": {
+    "fanoos": "./bin/fanoos.js"
+  },
   "scripts": {
     "build": "tsdown"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "commander": "catalog:",
-    "fanoos":"workspace:*"
+    "fanoos": "workspace:*"
   }
 }

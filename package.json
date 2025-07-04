@@ -1,21 +1,21 @@
 {
-  "name": "@fanoos/root",
-  "version": "0.0.2",
-  "type": "module",
-  "packageManager": "pnpm@10.12.4",
   "publisher": "NavidTM",
+  "name": "@fanoos/root",
+  "type": "module",
+  "version": "0.0.2",
+  "private": "true",
+  "packageManager": "pnpm@10.12.4",
   "workspaces": [
     "packages/*"
   ],
+  "license": "MIT",
+  "keywords": [],
   "scripts": {
     "test": "vitest",
     "test:cov": "vitest --coverage",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
-  "keywords": [],
-  "private":"true",
-  "license": "MIT",
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
     "@types/node": "catalog:",

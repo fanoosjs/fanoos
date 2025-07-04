@@ -19,7 +19,7 @@ export default defineConfig(
     test: true,
 
     // Disable jsonc
-    jsonc: false,
+    jsonc: true,
 
     ignores: [
       '**/tests/**/*.vue',
