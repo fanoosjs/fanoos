@@ -7,9 +7,10 @@
   "keywords": [],
   "main": "index.js",
   "bin": {
-    "fanoos": "./bin/fanoos.js"
+    "fanoos": "./dist/fanoos.mjs"
   },
   "scripts": {
+    "start": "node dist/fanoos.mjs",
     "build": "tsdown"
   },
   "dependencies": {
