@@ -6,6 +6,9 @@
   "license": "MIT",
   "keywords": [],
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "fanoos": "./dist/fanoos.mjs"
   },
