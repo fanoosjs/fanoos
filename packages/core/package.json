@@ -1,6 +1,6 @@
 {
   "name": "fanoos",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "FanoosJS is a static code analysis tool that helps developers understand the structure, architecture, and internal metrics of their JavaScript/TypeScript projects.",
   "author": "",
   "license": "MIT",
