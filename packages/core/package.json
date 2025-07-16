@@ -5,6 +5,9 @@
   "author": "",
   "license": "MIT",
   "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": "./dist/index.mjs",
     "./package.json": "./package.json"
