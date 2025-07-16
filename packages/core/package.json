@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "globby": "catalog:",
-    "oxc-parser": "catalog:"
+    "oxc-parser": "catalog:",
+    "oxc-walker": "catalog:"
   },
   "devDependencies": {
     "@types/fs-extra": "catalog:",
