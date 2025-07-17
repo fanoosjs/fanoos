@@ -1,10 +1,32 @@
 {
   "name": "fanoos",
+  "type": "module",
   "version": "0.0.3",
-  "description": "",
-  "author": "",
-  "license": "ISC",
-  "keywords": [],
-  "main": "index.js",
-  "scripts": {}
+  "description": "FanoosJS is a static code analysis tool that helps developers understand the structure, architecture, and internal metrics of their JavaScript/TypeScript projects.",
+  "author": {
+    "email": "navidt81@gmail.com",
+    "name": "NavidTM"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/fanoosjs/fanoos#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanoosjs/fanoos.git",
+    "directory": "/fanoos"
+  },
+  "bugs": {
+    "url": "https://github.com/fanoosjs/fanoos/issues"
+  },
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  }
 }
