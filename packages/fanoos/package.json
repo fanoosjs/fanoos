@@ -28,5 +28,17 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@fanoosjs/core": "workspace:*",
+    "@nuxt/icon": "catalog:",
+    "reka-ui": "catalog:",
+    "shiki": "catalog:"
+  },
+  "devDependencies": {
+    "@iconify-json/material-icon-theme": "catalog:",
+    "@iconify-json/material-symbols": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "tailwindcss": "catalog:"
   }
 }
