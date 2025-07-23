@@ -19,6 +19,7 @@ catalog:
   fs-extra: ^11.3.0
   globby: ^14.1.0
   nuxt: ^4.0.0
+  nuxt-typed-router: ^4.0.1
   oxc-parser: ^0.75.1
   oxc-walker: ^0.3.0
   reka-ui: ^2.3.2

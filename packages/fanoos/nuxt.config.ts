@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  modules: ['reka-ui/nuxt', '@nuxt/icon'],
+  modules: ['reka-ui/nuxt', '@nuxt/icon', 'nuxt-typed-router'],
 
   icon: {
     aliases: {

@@ -39,6 +39,7 @@
     "@iconify-json/material-icon-theme": "catalog:",
     "@iconify-json/material-symbols": "catalog:",
     "@tailwindcss/vite": "catalog:",
+    "nuxt-typed-router": "catalog:",
     "tailwindcss": "catalog:"
   }
 }
