@@ -4,6 +4,6 @@
 
 <template>
   <div class="">
-    T
+    Index Page
   </div>
 </template>
