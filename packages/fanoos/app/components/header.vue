@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="py-3 w-full border-b border-white/20 sticky top-0 bg-dark z-10">
+  <div class="py-3 w-full border-b border-white/20 bg-dark z-10">
     <div class="w-full flex justify-between">
       <div class="flex items-center gap-2">
         <img src="../assets/images/FanoosJS-logo.png" alt="" class="w-14">
