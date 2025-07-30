@@ -5,15 +5,17 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  modules: ['reka-ui/nuxt', '@nuxt/icon', 'nuxt-typed-router'],
+  modules: ['reka-ui/nuxt', '@nuxt/ui-pro', '@nuxt/icon', '@nuxt/content', 'nuxt-typed-router'],
 
   icon: {
     aliases: {
-      'folder': 'material-symbols:folder',
-      'folder-open': 'material-symbols:folder-open',
-      'ts': 'material-icon-theme:typescript',
-      'js': 'material-icon-theme:javascript',
+      ts: 'vscode-icons:file-type-typescript',
+      js: 'vscode-icons:file-type-js',
     },
+  },
+
+  content: {
+    experimental: { sqliteConnector: 'native' },
   },
 
   vite: {
