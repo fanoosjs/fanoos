@@ -1,17 +1,11 @@
-import path from 'node:path';
-
-export interface TreeNode {
-  name: string;
-  ext: string;
-  path: string;
-  children?: TreeNode[];
-}
+import type { TreeItem } from '#ui/types';
+import { extname, posix } from 'node:path';
 
 interface FileTree {
   [name: string]: FileTree | null;
 }
 
-export function buildTree(paths: string[]): TreeNode[] {
+export function buildTree(paths: string[]): TreeItem[] {
   const root: FileTree = {};
 
   for (const path of paths) {
@@ -34,17 +28,16 @@ export function buildTree(paths: string[]): TreeNode[] {
   return toTree(root, '');
 }
 
-export function toTree(obj: FileTree, parentPath: string): TreeNode[] {
-  return Object.entries(obj).map(([name, value]) => {
-    const currentPath = path.posix.join(parentPath, name);
-    const ext = path.extname(name);
+export function toTree(obj: FileTree, parentPath: string): TreeItem[] {
+  return Object.entries(obj).map(([title, value]) => {
+    const path = posix.join(parentPath, title);
     const isFile = value === null;
 
     return {
-      name,
-      ext,
-      path: currentPath,
-      children: !isFile ? toTree(value, currentPath) : undefined,
+      label: `/${title}`,
+      icon: isFile ? extname(title).slice(1) : undefined,
+      path,
+      children: !isFile ? toTree(value, path) : undefined,
     };
   });
 }
