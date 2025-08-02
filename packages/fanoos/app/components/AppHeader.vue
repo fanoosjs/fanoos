@@ -1,12 +1,10 @@
 <script setup lang="ts">
-const route = useRoute();
-
 const items = computed(() => [
-  {
-    label: 'Docs',
-    to: '/getting-started',
-    active: route.path.startsWith('/getting-started'),
-  },
+  // {
+  //   label: 'Docs',
+  //   to: '/getting-started',
+  //   active: route.path.startsWith('/getting-started'),
+  // },
   {
     label: 'Issues',
     to: 'https://github.com/fanoosjs/fanoos/isssus',
