@@ -18,7 +18,7 @@ const { data } = useFetch<{ loc: LOC }>('/api/analyzer', {
 
 <template>
   <UPage class="p-12">
-    {{ data }}
+    <LOCBar v-if="data?.loc" :loc="data.loc" lang="ts" />
     <template #right>
       <div class="" />
     </template>
