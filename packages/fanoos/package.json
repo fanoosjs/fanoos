@@ -32,7 +32,8 @@
   "dependencies": {
     "@fanoosjs/core": "workspace:*",
     "@nuxt/content": "catalog:",
-    "@nuxt/ui-pro": "catalog:"
+    "@nuxt/ui-pro": "catalog:",
+    "motion-v": "catalog:"
   },
   "devDependencies": {
     "@iconify-json/lucide": "catalog:",

@@ -23,6 +23,7 @@ catalog:
   fs-extra: ^11.3.0
   globby: ^14.1.0
   i: ^0.3.7
+  motion-v: ^1.6.1
   npm: ^11.5.1
   nuxt: ^4.0.0
   nuxt-typed-router: ^4.0.1
