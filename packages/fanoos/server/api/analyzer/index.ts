@@ -1,5 +1,5 @@
 import path from 'node:path';
-import { loadFileContent, parseCodeToAST } from '@fanoosjs/core';
+import { countDeclarations, countLOC, loadFileContent, parseCodeToAST } from '@fanoosjs/core';
 
 export default defineEventHandler<{
   query: {
@@ -12,5 +12,8 @@ export default defineEventHandler<{
 
   const ast = await parseCodeToAST(path.join('../..', query.path), content);
 
-  return { ast, content };
+  const loc = countLOC(content);
+  const declarations = countDeclarations(ast.program);
+
+  return { loc, declarations };
 });
