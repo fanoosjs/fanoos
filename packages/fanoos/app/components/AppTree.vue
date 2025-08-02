@@ -5,15 +5,16 @@ const { data } = useFetch<TreeItem[]>('/api/scanner/tree', {
   lazy: true,
   server: false,
 });
-
-const treeItem = ref();
 </script>
 
 <template>
-  {{ treeItem?.path }}
   <UTree
-
-    v-model="treeItem"
     :items="data"
-  />
+  >
+    <template #item-label="{ item }">
+      <NuxtLink :to="`/tree/${item.path}`">
+        {{ item.label }}
+      </NuxtLink>
+    </template>
+  </UTree>
 </template>
