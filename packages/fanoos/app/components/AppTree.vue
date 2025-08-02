@@ -12,7 +12,10 @@ const { data } = useFetch<TreeItem[]>('/api/scanner/tree', {
     :items="data"
   >
     <template #item-label="{ item }">
-      <NuxtLink :to="`/tree/${item.path}`">
+      <div v-if="item.children" class="text-left">
+        {{ item.label }}
+      </div>
+      <NuxtLink v-else :to="`/tree/${item.path}`" class="w-full text-left block">
         {{ item.label }}
       </NuxtLink>
     </template>
