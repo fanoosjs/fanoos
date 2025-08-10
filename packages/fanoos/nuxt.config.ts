@@ -5,7 +5,15 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  modules: ['reka-ui/nuxt', '@nuxt/ui-pro', '@nuxt/icon', '@nuxt/content', 'nuxt-typed-router', 'motion-v/nuxt'],
+  modules: [
+    'reka-ui/nuxt',
+    '@nuxt/ui-pro',
+    '@nuxt/icon',
+    '@nuxt/content',
+    'nuxt-typed-router',
+    'motion-v/nuxt',
+    '@nuxt/eslint',
+  ],
 
   icon: {
     aliases: {
