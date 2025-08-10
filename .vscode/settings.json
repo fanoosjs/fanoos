@@ -26,7 +26,9 @@
   // Enable eslint for all supported languages
   "eslint.validate": [
     "typescript",
+    "javascript",
     "markdown",
+    "vue",
     "json",
     "yaml"
   ],
