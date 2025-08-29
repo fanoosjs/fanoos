@@ -1,6 +1,7 @@
 // eslint.config.js
 import defineConfig from '@antfu/eslint-config';
 import vitest from '@vitest/eslint-plugin';
+import nuxt from '/packages/fanoos/.nuxt/eslint.config';
 
 export default defineConfig(
   {
@@ -18,9 +19,6 @@ export default defineConfig(
     yaml: true,
     test: true,
 
-    // Disable jsonc
-    jsonc: true,
-
     ignores: [
       '**/tests/**/*.vue',
     ],
@@ -33,16 +31,21 @@ export default defineConfig(
     rules: {
       ...vitest.configs.all.rules, // you can also use vitest.configs.all.rules to enable all rules
       'vitest/max-nested-describe': ['error', { max: 3 }], // you can also modify rules' behavior using option like this
+      'vue/max-attributes-per-line': ['error', {
+        singleline: 1,
+        multiline: 1,
+      }],
     },
     settings: {
       vitest: {
         typecheck: true,
       },
     },
+
     languageOptions: {
       globals: {
         ...vitest.environments.env.globals,
       },
     },
   },
-);
+).append(nuxt());

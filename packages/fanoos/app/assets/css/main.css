@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "@nuxt/ui-pro";
+
+@theme {
+    --color-dark: #000028;
+    --color-primary: #194D98;
+    --color-secondary: #F8B016;
+    --color-fire: #F67C04;
+}
+
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

@@ -1,10 +1,50 @@
 {
   "name": "fanoos",
+  "type": "module",
   "version": "0.0.3",
-  "description": "",
-  "author": "",
-  "license": "ISC",
-  "keywords": [],
-  "main": "index.js",
-  "scripts": {}
+  "description": "FanoosJS is a static code analysis tool that helps developers understand the structure, architecture, and internal metrics of their JavaScript/TypeScript projects.",
+  "author": {
+    "email": "navidt81@gmail.com",
+    "name": "NavidTM"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/fanoosjs/fanoos#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanoosjs/fanoos.git",
+    "directory": "/fanoos"
+  },
+  "bugs": {
+    "url": "https://github.com/fanoosjs/fanoos/issues"
+  },
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@fanoosjs/core": "workspace:*",
+    "@nuxt/content": "catalog:",
+    "@nuxt/ui-pro": "catalog:",
+    "chart.js": "^4.5.0",
+    "echarts": "^6.0.0",
+    "motion-v": "catalog:"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "catalog:",
+    "@iconify-json/material-symbols": "catalog:",
+    "@iconify-json/simple-icons": "^1.2.47",
+    "@iconify-json/vscode-icons": "catalog:",
+    "@nuxt/eslint": "^1.7.1",
+    "@tailwindcss/vite": "catalog:",
+    "nuxt-typed-router": "catalog:",
+    "tailwindcss": "catalog:"
+  }
 }

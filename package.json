@@ -24,8 +24,11 @@
     "automd": "catalog:",
     "changelogen": "catalog:",
     "eslint": "catalog:",
+    "nuxt": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
   }
 }
