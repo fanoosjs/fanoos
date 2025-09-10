@@ -14,6 +14,7 @@ export default defineConfig(
 
     // TypeScript and Vue are autodetected, you can also explicitly enable them:
     typescript: true,
+    javascript:true,
     pnpm: true,
     yaml: true,
     test: true,
