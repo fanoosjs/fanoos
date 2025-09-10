@@ -2,7 +2,7 @@ import type { LOC } from '../../src/metrics/loc';
 import { describe, expect, it } from 'vitest';
 import { countLOC } from '../../src/metrics/loc';
 
-describe('countLOC', () => {
+describe.concurrent('countLOC', () => {
   it('counts code, blank, single-line and multi-line comments correctly', () => {
     const sample = `// single comment line
 
@@ -27,6 +27,7 @@ describe('countLOC', () => {
     expect(result.comment.singleLine).toBe(1);
     expect(result.comment.multiLine).toBe(3); // two lines inside block, one start
     expect(result.comment.doc).toBe(3); // /**, *, */ lines
+    expect(result.comment.total).toBe(7);
   });
 
   it('handles empty input as one blank line', () => {
@@ -34,9 +35,7 @@ describe('countLOC', () => {
     expect(result.total).toBe(1);
     expect(result.code).toBe(0);
     expect(result.blank).toBe(1);
-    expect(result.comment.singleLine).toBe(0);
-    expect(result.comment.multiLine).toBe(0);
-    expect(result.comment.doc).toBe(0);
+    expect(result.comment.total).toBe(0);
   });
 
   it('counts multi block comments correctly', () => {
@@ -52,7 +51,7 @@ describe('countLOC', () => {
     expect(result.code).toBe(1);
   });
 
-  it('counts inline block comment as code', () => {
+  it('do not counts inline block comment as code', () => {
     const sample = `const a = 2; /* inline comment */`;
 
     const result = countLOC(sample);
