@@ -16,6 +16,8 @@ export interface LOC {
     multiLine: number;
     /** Number of documentation comments */
     doc: number;
+    /** Total number of comments */
+    total: number;
   };
 }
 
@@ -93,6 +95,7 @@ export function countLOC(source: string): LOC {
   }
 
   const total = code + blank + singleLine + multiLine + doc;
+  const totalComment = singleLine + multiLine + doc;
 
   return {
     total,
@@ -102,6 +105,7 @@ export function countLOC(source: string): LOC {
       singleLine,
       multiLine,
       doc,
+      total: totalComment,
     },
   };
 }
