@@ -1,0 +1,30 @@
+{
+  "name": "fanoos",
+  "version": "0.1.0",
+  "description": "Static JavaScript analysis primitives for Fanoos",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "development": "./src/index.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@babel/parser": "catalog:",
+    "@babel/types": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "vite": "^8.1.5"
+  }
+}

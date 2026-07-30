@@ -1,5 +1,5 @@
 {
-  "name": "code-layers",
+  "name": "fanoos-monorepo",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -8,7 +8,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "pnpm --filter @code-layers/playground dev",
+    "dev": "pnpm --filter @fanoosjs/playground dev",
     "build": "pnpm -r --if-present build",
     "test": "vitest run",
     "test:watch": "vitest",

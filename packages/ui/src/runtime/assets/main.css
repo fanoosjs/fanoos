@@ -1,0 +1,136 @@
+@import 'tailwindcss';
+@source "../**/*.{vue,ts}";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --fanoos-canvas: #f3f6f8;
+  --fanoos-panel: #ffffff;
+  --fanoos-panel-muted: #f8fafb;
+  --fanoos-line: #dce4e8;
+  --fanoos-line-strong: #bdcbd2;
+  --fanoos-ink: #15242c;
+  --fanoos-muted: #61717a;
+  --fanoos-accent: #92570a;
+  --fanoos-accent-soft: #fff0c7;
+  --fanoos-warning: #b35a12;
+  --fanoos-danger: #bb2d3b;
+  --fanoos-code: #eef3f5;
+  color-scheme: light;
+}
+
+.dark {
+  --fanoos-canvas: #0d1418;
+  --fanoos-panel: #131d22;
+  --fanoos-panel-muted: #172329;
+  --fanoos-line: #26363e;
+  --fanoos-line-strong: #3b505a;
+  --fanoos-ink: #e2ebee;
+  --fanoos-muted: #91a5ae;
+  --fanoos-accent: #f2b84b;
+  --fanoos-accent-soft: #3a2a11;
+  --fanoos-warning: #f3a75f;
+  --fanoos-danger: #fa7783;
+  --fanoos-code: #101a1f;
+  color-scheme: dark;
+}
+
+html {
+  background: var(--fanoos-canvas);
+  color: var(--fanoos-ink);
+  font-family: 'IBM Plex Sans', 'Avenir Next', Avenir, 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    linear-gradient(var(--fanoos-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--fanoos-line) 1px, transparent 1px), var(--fanoos-canvas);
+  background-size: 32px 32px;
+  background-attachment: fixed;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--fanoos-accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--fanoos-accent-soft);
+  color: var(--fanoos-ink);
+}
+
+.fanoos-scrollbar {
+  scrollbar-color: var(--fanoos-line-strong) transparent;
+  scrollbar-width: thin;
+}
+
+.fanoos-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.fanoos-scrollbar::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: var(--fanoos-line-strong);
+  background-clip: content-box;
+}
+
+.vue-flow__edge-path {
+  stroke: var(--fanoos-line-strong);
+  stroke-width: 1.5;
+}
+
+.vue-flow__edge.selected .vue-flow__edge-path {
+  stroke: var(--fanoos-accent);
+}
+
+.vue-flow__edge-text {
+  fill: var(--fanoos-muted);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.vue-flow__edge-textbg {
+  fill: var(--fanoos-panel);
+}
+
+.vue-flow__controls {
+  overflow: hidden;
+  border: 1px solid var(--fanoos-line);
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.vue-flow__controls-button {
+  border-color: var(--fanoos-line);
+  background: var(--fanoos-panel);
+  fill: var(--fanoos-ink);
+}
+
+.vue-flow__minimap {
+  border: 1px solid var(--fanoos-line);
+  border-radius: 8px;
+  background: var(--fanoos-panel-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
