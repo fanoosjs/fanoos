@@ -1,0 +1,33 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="128"
+  height="128"
+  viewBox="0 0 128 128"
+  fill="none"
+  role="img"
+  aria-labelledby="fanoos-mark-title fanoos-mark-description"
+>
+  <title id="fanoos-mark-title">Fanoos logo mark</title>
+  <desc id="fanoos-mark-description">
+    A minimal lantern whose illuminated chamber contains a connected software flow graph.
+  </desc>
+  <rect width="128" height="128" rx="28" fill="#101A1F" />
+  <path
+    d="M44 41C45.4 28.3 51.8 22 64 22s18.6 6.3 20 19M37 43h54M42 53h44l-5.5 52h-33z"
+    stroke="#F2B84B"
+    stroke-width="5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="m52 88 12-17 11 10 10-21"
+    stroke="#F7FAFB"
+    stroke-width="4.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="52" cy="88" r="4.6" fill="#F2B84B" />
+  <circle cx="64" cy="71" r="4.6" fill="#F2B84B" />
+  <circle cx="75" cy="81" r="4.6" fill="#F2B84B" />
+  <circle cx="85" cy="60" r="4.6" fill="#F2B84B" />
+</svg>

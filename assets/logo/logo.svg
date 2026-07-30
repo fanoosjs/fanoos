@@ -1,0 +1,63 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="480"
+  height="96"
+  viewBox="0 0 480 96"
+  fill="none"
+  role="img"
+  aria-labelledby="fanoos-logo-title fanoos-logo-description"
+>
+  <title id="fanoos-logo-title">Fanoos</title>
+  <desc id="fanoos-logo-description">
+    A lantern containing an illuminated software flow graph beside the words Fanoos, Illuminate your
+    code.
+  </desc>
+  <rect width="480" height="96" rx="20" fill="#101A1F" />
+  <g transform="translate(18 12)">
+    <rect width="72" height="72" rx="18" fill="#172329" />
+    <path
+      d="M25 23C25.8 15.7 29.5 12 36 12s10.2 3.7 11 11M21 24h30M23.8 30h24.4l-3.1 29H26.9z"
+      stroke="#F2B84B"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="m30 50 6-8 6 5 5-10"
+      stroke="#F7FAFB"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <circle cx="30" cy="50" r="2.6" fill="#F2B84B" />
+    <circle cx="36" cy="42" r="2.6" fill="#F2B84B" />
+    <circle cx="42" cy="47" r="2.6" fill="#F2B84B" />
+    <circle cx="47" cy="37" r="2.6" fill="#F2B84B" />
+  </g>
+  <text
+    x="112"
+    y="51"
+    fill="#F7FAFB"
+    font-family="'IBM Plex Sans', 'Avenir Next', 'Segoe UI', sans-serif"
+    font-size="38"
+    font-weight="650"
+    letter-spacing="-1.4"
+  >
+    Fanoos
+  </text>
+  <text
+    x="114"
+    y="72"
+    fill="#A9BAC1"
+    font-family="'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace"
+    font-size="12"
+    font-weight="500"
+    letter-spacing="0.35"
+  >
+    Illuminate your code.
+  </text>
+  <path d="M439 28v40" stroke="#33464F" stroke-width="1" />
+  <circle cx="451" cy="36" r="3" fill="#F2B84B" />
+  <circle cx="451" cy="48" r="3" fill="#617781" />
+  <circle cx="451" cy="60" r="3" fill="#33464F" />
+</svg>
