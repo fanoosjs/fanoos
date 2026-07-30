@@ -4,28 +4,11 @@
   "type": "module",
   "version": "0.0.2",
   "private": "true",
-  "packageManager": "pnpm@10.18.1",
   "workspaces": [
     "packages/*"
   ],
   "license": "MIT",
   "keywords": [],
   "scripts": {
-    "test": "vitest",
-    "test:cov": "vitest --coverage",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix"
-  },
-  "devDependencies": {
-    "@antfu/eslint-config": "catalog:",
-    "@types/node": "catalog:",
-    "@vitest/coverage-v8": "catalog:",
-    "@vitest/eslint-plugin": "catalog:",
-    "automd": "catalog:",
-    "changelogen": "catalog:",
-    "eslint": "catalog:",
-    "tsdown": "catalog:",
-    "typescript": "catalog:",
-    "vitest": "catalog:"
   }
 }
