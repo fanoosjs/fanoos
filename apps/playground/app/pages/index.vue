@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowRight, Braces, GitFork, Layers3 } from 'lucide-vue-next'
+import { ArrowRight, Braces, GitFork, Layers3 } from '@lucide/vue'
 import { useHead } from 'nuxt/app'
 
 useHead({
