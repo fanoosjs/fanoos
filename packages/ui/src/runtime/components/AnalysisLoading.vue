@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Binary, GitBranch, Variable } from 'lucide-vue-next'
+import { Binary, GitBranch, Variable } from '@lucide/vue'
 
 import { copy } from '../utils/copy'
 </script>

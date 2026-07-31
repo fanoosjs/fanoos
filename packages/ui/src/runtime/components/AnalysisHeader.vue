@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CheckCircle2, Moon, PanelLeftOpen, PanelRightOpen, RefreshCw, Sun } from 'lucide-vue-next'
+import { CheckCircle2, Moon, PanelLeftOpen, PanelRightOpen, RefreshCw, Sun } from '@lucide/vue'
 
 import { copy } from '../utils/copy'
 

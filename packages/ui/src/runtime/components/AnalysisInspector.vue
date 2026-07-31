@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { AnalysisResult, Diagnostic, SourceLocation, VariableInfo } from '@fanoosjs/core'
-import { ArrowDownLeft, ArrowUpRight, Braces, CircleDot, X } from 'lucide-vue-next'
+import { ArrowDownLeft, ArrowUpRight, Braces, CircleDot, X } from '@lucide/vue'
 import { computed } from 'vue'
 
 import { useAnalysisSelection } from '../composables/useAnalysisSelection'

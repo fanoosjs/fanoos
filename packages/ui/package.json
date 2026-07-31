@@ -29,7 +29,7 @@
     "@vue-flow/minimap": "catalog:",
     "elkjs": "catalog:",
     "h3": "catalog:",
-    "lucide-vue-next": "catalog:",
+    "@lucide/vue": "catalog:",
     "nitropack": "catalog:",
     "shiki": "catalog:",
     "tailwindcss": "catalog:",

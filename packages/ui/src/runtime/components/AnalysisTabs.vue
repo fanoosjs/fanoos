@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Braces, GitFork, Layers3, Telescope } from 'lucide-vue-next'
+import { Braces, GitFork, Layers3, Telescope } from '@lucide/vue'
 
 import { copy } from '../utils/copy'
 

@@ -4,7 +4,7 @@ import { MarkerType, VueFlow, type NodeMouseEvent, type VueFlowStore } from '@vu
 import { Background } from '@vue-flow/background'
 import { Controls } from '@vue-flow/controls'
 import { MiniMap } from '@vue-flow/minimap'
-import { GitFork } from 'lucide-vue-next'
+import { GitFork } from '@lucide/vue'
 import { nextTick, shallowRef, watch } from 'vue'
 
 import { useAnalysisSelection } from '../composables/useAnalysisSelection'

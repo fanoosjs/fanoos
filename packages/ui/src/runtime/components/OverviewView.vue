@@ -8,7 +8,7 @@ import {
   IterationCw,
   TerminalSquare,
   Variable,
-} from 'lucide-vue-next'
+} from '@lucide/vue'
 
 import { useAnalysisSelection } from '../composables/useAnalysisSelection'
 import { copy } from '../utils/copy'

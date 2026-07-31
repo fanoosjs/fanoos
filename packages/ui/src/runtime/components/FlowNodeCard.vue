@@ -9,7 +9,7 @@ import {
   Split,
   TerminalSquare,
   TriangleAlert,
-} from 'lucide-vue-next'
+} from '@lucide/vue'
 import { computed } from 'vue'
 
 import { useAnalysisSelection } from '../composables/useAnalysisSelection'
