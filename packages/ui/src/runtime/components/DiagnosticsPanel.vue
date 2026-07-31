@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Diagnostic } from 'fanoos'
+import type { Diagnostic } from '@fanoosjs/core'
 import { AlertCircle, AlertTriangle, Info } from 'lucide-vue-next'
 
 import { copy } from '../utils/copy'

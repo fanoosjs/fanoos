@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AnalysisResult } from 'fanoos'
+import type { AnalysisResult } from '@fanoosjs/core'
 import { MarkerType, VueFlow, type NodeMouseEvent, type VueFlowStore } from '@vue-flow/core'
 import { Background } from '@vue-flow/background'
 import { Controls } from '@vue-flow/controls'

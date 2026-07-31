@@ -1,4 +1,4 @@
-import type { SourceLocation, StructureNode } from 'fanoos'
+import type { SourceLocation, StructureNode } from '@fanoosjs/core'
 
 import type { FlatStructureNode } from '../types'
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { StructureNode } from 'fanoos'
+import type { StructureNode } from '@fanoosjs/core'
 import {
   ChevronDown,
   CircleDot,

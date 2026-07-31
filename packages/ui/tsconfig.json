@@ -3,7 +3,7 @@
   "compilerOptions": {
     "types": ["node"],
     "paths": {
-      "fanoos": ["../core/src/index.ts"]
+      "@fanoosjs/core": ["../core/src/index.ts"]
     }
   },
   "include": ["src"]

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AnalysisResult, SourceLocation } from 'fanoos'
+import type { AnalysisResult, SourceLocation } from '@fanoosjs/core'
 import { Check, Copy, FileCode2 } from 'lucide-vue-next'
 import { computed, nextTick, shallowRef, watch } from 'vue'
 

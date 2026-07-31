@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AnalysisResult } from 'fanoos'
+import type { AnalysisResult } from '@fanoosjs/core'
 import { useFetch, useHead, useRuntimeConfig } from 'nuxt/app'
 import { computed, onMounted, shallowRef } from 'vue'
 

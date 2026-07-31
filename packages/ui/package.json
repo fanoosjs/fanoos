@@ -19,7 +19,7 @@
     "typecheck": "vue-tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
-    "fanoos": "workspace:*",
+    "@fanoosjs/core": "workspace:*",
     "@nuxt/kit": "catalog:",
     "@nuxt/schema": "catalog:",
     "@tailwindcss/vite": "catalog:",

@@ -1,5 +1,5 @@
 {
-  "name": "fanoos",
+  "name": "@fanoosjs/core",
   "version": "0.1.0",
   "description": "Static JavaScript analysis primitives for Fanoos",
   "type": "module",

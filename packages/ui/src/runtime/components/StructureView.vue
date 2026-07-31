@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AnalysisResult } from 'fanoos'
+import type { AnalysisResult } from '@fanoosjs/core'
 import { Layers3 } from 'lucide-vue-next'
 
 defineProps<{

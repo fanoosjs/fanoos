@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url'
 
-import { AnalysisResultSchema } from 'fanoos'
+import { AnalysisResultSchema } from '@fanoosjs/core'
 import { $fetch, fetch, setup } from '@nuxt/test-utils/e2e'
 import { describe, expect, it } from 'vitest'
 

@@ -6,7 +6,7 @@ import {
   analyzeJavaScript,
   type AnalysisResult,
   type DiagnosticCode,
-} from 'fanoos'
+} from '@fanoosjs/core'
 import { createError, defineEventHandler } from 'h3'
 import { useRuntimeConfig } from 'nitropack/runtime'
 import { createHighlighter, type Highlighter } from 'shiki'

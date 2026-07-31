@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { FlowNode } from 'fanoos'
+import type { FlowNode } from '@fanoosjs/core'
 import {
   Circle,
   CircleStop,

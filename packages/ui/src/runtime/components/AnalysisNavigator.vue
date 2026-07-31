@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AnalysisResult, Diagnostic, StructureNode } from 'fanoos'
+import type { AnalysisResult, Diagnostic, StructureNode } from '@fanoosjs/core'
 import {
   AlertTriangle,
   ChevronDown,

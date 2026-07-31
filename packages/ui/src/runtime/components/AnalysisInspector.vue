@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AnalysisResult, Diagnostic, SourceLocation, VariableInfo } from 'fanoos'
+import type { AnalysisResult, Diagnostic, SourceLocation, VariableInfo } from '@fanoosjs/core'
 import { ArrowDownLeft, ArrowUpRight, Braces, CircleDot, X } from 'lucide-vue-next'
 import { computed } from 'vue'
 

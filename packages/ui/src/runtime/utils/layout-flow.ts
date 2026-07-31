@@ -1,4 +1,4 @@
-import type { FlowEdge, FlowNode } from 'fanoos'
+import type { FlowEdge, FlowNode } from '@fanoosjs/core'
 import type { Edge, Node } from '@vue-flow/core'
 import type { ElkNode } from 'elkjs/lib/elk-api'
 

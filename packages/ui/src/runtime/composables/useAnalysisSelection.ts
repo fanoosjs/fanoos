@@ -1,4 +1,4 @@
-import type { AnalysisResult, StructureNode } from 'fanoos'
+import type { AnalysisResult, StructureNode } from '@fanoosjs/core'
 import {
   computed,
   inject,

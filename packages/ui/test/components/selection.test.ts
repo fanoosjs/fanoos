@@ -1,6 +1,6 @@
 // @vitest-environment happy-dom
 
-import { analyzeJavaScript, type AnalysisResult } from 'fanoos'
+import { analyzeJavaScript, type AnalysisResult } from '@fanoosjs/core'
 import { mount } from '@vue/test-utils'
 import { shallowRef } from 'vue'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
