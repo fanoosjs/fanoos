@@ -1,0 +1,57 @@
+{
+  "name": "fanoos",
+  "version": "0.1.0",
+  "description": "The complete Fanoos JavaScript code-understanding toolkit",
+  "type": "module",
+  "sideEffects": false,
+  "bin": {
+    "fanoos": "./bin/fanoos.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "development": "./src/index.ts",
+      "import": "./dist/index.js"
+    },
+    "./core": {
+      "types": "./src/core.ts",
+      "development": "./src/core.ts",
+      "import": "./dist/core.js"
+    },
+    "./ui": {
+      "types": "./src/ui.ts",
+      "development": "./src/ui.ts",
+      "import": "./dist/ui.js"
+    },
+    "./cli": {
+      "types": "./src/cli.ts",
+      "development": "./src/cli.ts",
+      "import": "./dist/cli.js"
+    }
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@fanoosjs/cli": "workspace:*",
+    "@fanoosjs/core": "workspace:*",
+    "@fanoosjs/ui": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "vite": "^8.1.5"
+  },
+  "peerDependencies": {
+    "nuxt": "^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "nuxt": {
+      "optional": true
+    }
+  }
+}
