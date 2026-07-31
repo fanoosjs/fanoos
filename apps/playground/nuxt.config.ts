@@ -3,9 +3,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     [
-      '@fanoosjs/ui',
+      'fanoos',
       {
-        entry: './examples/price-calculation.js',
+        entry: './examples/nested-condition.js',
         route: '/__analyse',
         title: 'Fanoos Playground',
       },

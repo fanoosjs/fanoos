@@ -9,8 +9,8 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@fanoosjs/ui": "workspace:*",
-    "lucide-vue-next": "catalog:",
+    "fanoos": "workspace:*",
+    "lucide-vue-next": "0.577.0",
     "nuxt": "catalog:",
     "vue": "catalog:"
   },
