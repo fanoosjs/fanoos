@@ -10,8 +10,8 @@ file statically, normalizes it into a runtime-validated intermediate representat
 that single analysis into an overview, control-flow graph, nested structure view, source view,
 navigator, and inspector.
 
-The repository contains a framework-independent analyzer and an installable Nuxt 4 module. No input
-source is executed.
+The repository contains a framework-independent analyzer, a command-line interface, an installable
+Nuxt 4 UI integration, and the all-in-one `fanoos` distribution. No input source is executed.
 
 ## MVP scope
 
@@ -71,9 +71,9 @@ JavaScript source
   → Overview / Flow / Structure / Source projections
 ```
 
-The Babel AST is private to `fanoos`. UI code consumes only the shared `AnalysisResult`; neither Vue
-nor `@fanoosjs/ui` reparses the source. Control flow and variable analysis are derived from
-normalized IR rather than raw Babel nodes.
+The Babel AST is private to `@fanoosjs/core`. UI and CLI code consume only the shared
+`AnalysisResult`; neither consumer reparses the source. Control flow and variable analysis are
+derived from normalized IR rather than raw Babel nodes.
 
 IDs are deterministic and source-based, for example `node:if:120:194` and
 `edge:true:flow:condition:120:194:flow:statement:145:160`. A deterministic suffix resolves the rare
@@ -82,6 +82,12 @@ collision without randomness.
 ## Package responsibilities
 
 ### `fanoos`
+
+The complete public distribution. It preserves the analyzer API at the package root, includes
+`@fanoosjs/core`, `@fanoosjs/ui`, and `@fanoosjs/cli`, exposes them through `fanoos/core`,
+`fanoos/ui`, and `fanoos/cli`, and installs the `fanoos` executable.
+
+### `@fanoosjs/core`
 
 A synchronous TypeScript library with no Nuxt, Vue, DOM, or browser dependency. It owns parsing,
 JSDoc extraction, normalized IR, structural nodes, variable reads/writes, control-flow construction,
@@ -95,18 +101,27 @@ route, keeps the absolute path in private runtime config, caches analysis by pat
 one Shiki highlighter, and renders the synchronized interface. Vue Flow is client guarded and ELK
 is lazy-loaded only when the graph layout changes.
 
+### `@fanoosjs/cli`
+
+A Node.js 22 command-line interface for analyzing `.js` and `.mjs` files without executing them. It
+supports human-readable summaries, schema-compatible JSON, file output, controlled exit codes, and
+both `analyse` and `analyze` command spellings.
+
 ## Installation
 
-Install the framework-independent analyzer:
+Install the complete toolkit:
 
 ```bash
 pnpm add fanoos
 ```
 
-For the Nuxt interface, install both public packages:
+This includes the core API, UI integration, CLI API, and `fanoos` binary. Specialized packages can
+also be installed directly:
 
 ```bash
-pnpm add fanoos @fanoosjs/ui
+pnpm add @fanoosjs/core
+pnpm add @fanoosjs/ui
+pnpm add @fanoosjs/cli
 ```
 
 Requirements: Node.js 22 or newer.
@@ -144,13 +159,29 @@ pnpm format:check   # Prettier verification
 pnpm check          # lint + typecheck + test + build
 ```
 
+## CLI usage
+
+```bash
+# Human-readable analysis
+pnpm exec fanoos analyse ./example.js
+
+# Machine-readable result
+pnpm exec fanoos analyze ./example.js --format json
+
+# Write the result to a file
+pnpm exec fanoos ./example.js --format json --output analysis.json
+```
+
+The CLI returns exit code `0` for a successful analysis, `1` for file or parse failures, and `2` for
+invalid CLI usage. It accepts only `.js` and `.mjs` files and never imports or executes the input.
+
 ## UI package: Nuxt usage
 
 ```ts
 export default defineNuxtConfig({
   modules: [
     [
-      '@fanoosjs/ui',
+      'fanoos',
       {
         entry: './examples/price-calculation.js',
         route: '/__analyse',
@@ -161,6 +192,10 @@ export default defineNuxtConfig({
   ],
 })
 ```
+
+The `fanoos` package exposes the Nuxt module as its default export. Applications that prefer the
+specialized dependency can replace `fanoos` with `@fanoosjs/ui`; `fanoos/ui` remains available as an
+explicit subpath.
 
 Options:
 
@@ -180,6 +215,8 @@ Only `.js` and `.mjs` entries are accepted.
 import { readFile } from 'node:fs/promises'
 
 import { analyzeJavaScript } from 'fanoos'
+// Equivalent specialized import:
+// import { analyzeJavaScript } from '@fanoosjs/core'
 
 const source = await readFile('./example.js', 'utf8')
 
@@ -189,8 +226,9 @@ const analysis = analyzeJavaScript({
 })
 ```
 
-`analyzeJavaScript` is synchronous and returns a validated `AnalysisResult`. The package also exports
-the Zod schemas and public TypeScript types for documents, expressions, structure, flow, variables,
+`analyzeJavaScript` remains available from the `fanoos` package root for compatibility. It is
+synchronous and returns a validated `AnalysisResult`. Both `fanoos` and `@fanoosjs/core` export the
+Zod schemas and public TypeScript types for documents, expressions, structure, flow, variables,
 locations, and diagnostics.
 
 ## Brand assets
@@ -248,10 +286,12 @@ Vitest 4 covers the core API through behavioral assertions for empty programs, s
 assignments, updates, all supported condition/loop nesting, JSDoc, output, reads/writes, unsupported
 nodes, parse errors, stable IDs, schema validation, start/end cardinality, loop-back, and exit edges.
 
-Vue component tests cover structure selection, source-line selection, variable
-declaration/read/write markers, diagnostic severity, and empty branches. `@nuxt/test-utils`
-integration tests build real fixtures and verify page/API registration, custom title rendering,
-schema validity, path-injection resistance, missing-file errors, and SSR output.
+CLI tests cover command aliases, summary and JSON formats, file output, usage failures, missing
+files, and parse-error exit codes. Umbrella-package tests verify the root core API and the
+`fanoos/ui` and `fanoos/cli` subpaths. Vue component tests cover structure selection, source-line
+selection, variable declaration/read/write markers, diagnostic severity, and empty branches.
+`@nuxt/test-utils` integration tests build real fixtures and verify page/API registration, custom
+title rendering, schema validity, path-injection resistance, missing-file errors, and SSR output.
 
 Core coverage thresholds are enforced at 85% lines/statements, 80% functions, and 75% branches.
 
