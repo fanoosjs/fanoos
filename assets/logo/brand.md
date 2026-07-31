@@ -48,7 +48,7 @@ identifiers, locations, and the tagline. System fallbacks are included in the SV
 asset remains portable.
 
 The wordmark is always written as `Fanoos`. Package names remain lowercase where npm requires it:
-`fanoos` and `@fanoosjs/ui`.
+`fanoos`, `@fanoosjs/core`, `@fanoosjs/ui`, and `@fanoosjs/cli`.
 
 ## Clear space and minimum sizes
 
